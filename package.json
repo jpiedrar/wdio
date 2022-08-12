@@ -1,0 +1,29 @@
+{
+  "name": "wdio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpiedrar/wdio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpiedrar/wdio/issues"
+  },
+  "homepage": "https://github.com/jpiedrar/wdio#readme",
+  "dependencies": {
+    "@wdio/cli": "^7.20.9"
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^7.20.9",
+    "@wdio/mocha-framework": "^7.20.7",
+    "@wdio/spec-reporter": "^7.20.8",
+    "chromedriver": "^104.0.0",
+    "wdio-chromedriver-service": "^7.3.2"
+  }
+}
