@@ -24,4 +24,19 @@ module.exports = class ItemActions extends CartSelectors {
     async clickPlaceOrderModalPurchaseButton(){
         await (this.placeOrderModalPurchaseButton).click()
     }
+    async waitForSuccessMessageToAppear(){
+        utilActions.waitForElementToBeDisplayed(this.successPurchaseModal)
+    }
+    async validateSuccessMessage(card, name){
+        sucessText = await this.successPurchaseModalText.getText()
+        console.warn('AQUI SE IMPRIMIÓ ALGO', sucessText)
+        //cardText = 'Card Number: ' + card
+        //nameText = 'Name: ' + name
+        if (sucessText.includes(card) && sucessText.includes(name)){
+            return true
+        }
+        else {
+            return false
+        }
+    }
 }

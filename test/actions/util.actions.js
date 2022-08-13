@@ -1,3 +1,5 @@
+const EC = require('wdio-wait-for')
+
 module.exports = class utils {
     async waitForElementToBeDisplayed(element, timeout = 2000) {
         try {
@@ -7,6 +9,6 @@ module.exports = class utils {
         }
     }
     async waitForAlertToBeDisplayed(timeout = 2000) {
-        //browser.waitUntil(alertIsPresent(), { timeout:timeout })
+        browser.waitUntil(EC.alertIsPresent(), { timeout:timeout })
     }
 }

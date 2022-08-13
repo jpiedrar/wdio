@@ -11,5 +11,7 @@ module.exports = class item {
     get placeOrderModalInputMonth() { return $('#month') }
     get placeOrderModalInputYear() { return $('#year') }
     get placeOrderModalPurchaseButton() { return $('//button[@onclick=\'purchaseOrder()\']') } 
-    get successPurchaseModal() { return $('//div[contains(@class,\'sweet-alert\')]')}
+    get successPurchaseModal() { return $('//button[text()=\'Purchase\']')}
+    get successPurchaseModalText() { return $('//div[contains(@class,\'sweet-alert\')]/h2') }
+    get successPurchaseModalOKButton() { return $('//button[text()=\'OK\']') }
 }

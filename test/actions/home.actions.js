@@ -32,4 +32,5 @@ module.exports = class HomeActions extends homeSelectors {
         await this.fillLoginForm(username, password)
         await this.clickLoginModalButton()
     }
+    
 }
