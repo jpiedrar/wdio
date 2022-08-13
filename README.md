@@ -30,4 +30,5 @@ First of all you will need to clone the repository and then start running this c
 ## Future steps (if I had have more time)
 
 * Add validation to text displayed when user completes the purchase
+* Add validation to count amount of items selected and displayed in cart
 * Docker integration to be run in a CI/CD environment 

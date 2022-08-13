@@ -32,5 +32,20 @@ module.exports = class HomeActions extends homeSelectors {
         await this.fillLoginForm(username, password)
         await this.clickLoginModalButton()
     }
+    async clickContactButton(){
+        await (await this.headerContactButton).click()
+    }
+    async fillContactForm(email, name, message){
+        await (this.contactModalContactEmailInput).setValue(email)
+        await (this.contactModalContactNameInput).setValue(name)
+        await (this.contactModalContactMessageInput).setValue(message)
+    }
+    async clickSendMessageButton(){
+        await (this.contactModalSendMessageButton).click()
+    }
+    async getContactAlertMessage(){
+        await utilActions.waitForAlertToBeDisplayed()
+        return browser.getAlertText()
+    }
     
 }
