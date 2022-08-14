@@ -11,7 +11,7 @@ const itemActions = new ItemActions()
 const cartActions = new CartActions()
 
 describe ('Cart Page', () => {
-    it ('Should make purchasesin guest mode', async function () {
+    it ('Should make purchases in guest mode | Regression, Smoke, Sanity', async function () {
         await homeActions.navigate()
         await homeActions.navigateToItemPage()
         await itemActions.addProductToCart()
@@ -30,7 +30,7 @@ describe ('Cart Page', () => {
         expect(await cartActions.successPurchaseModal).toExist()
         assert.equal(await cartActions.successPurchaseModal.isExisting(), true)
     })
-    it ('Should make purchases with user logged in', async function () {
+    it ('Should make purchases with user logged in | Regression, Smoke', async function () {
         await homeActions.navigate()
         await homeActions.login('tu001', 'asdf')
         await homeActions.navigateToItemPage()
@@ -50,7 +50,7 @@ describe ('Cart Page', () => {
         expect(await cartActions.successPurchaseModal).toExist()
         assert.equal(await cartActions.successPurchaseModal.isExisting(), true)
     })
-    it ('Should add products to the cart', async function(){
+    it ('Should add products to the cart | Regression', async function(){
         await homeActions.navigate()
         await homeActions.navigateToItemPage()
         await itemActions.addProductToCart()

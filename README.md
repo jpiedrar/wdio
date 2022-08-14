@@ -26,6 +26,9 @@ First of all you will need to clone the repository and then start running this c
 
 * `npm install`: this will install all the packages needed to run the application
 * `npm test`: this will run all the test 
+* `npm run regression`: this will run the regression suite
+* `npm run smoke`: this will run the smoke suite
+* `npm run sanity`: this will run the sanity suite
 
 ## Future steps (if I had have more time)
 
