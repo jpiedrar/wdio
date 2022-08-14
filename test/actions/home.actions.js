@@ -47,5 +47,15 @@ module.exports = class HomeActions extends homeSelectors {
         await utilActions.waitForAlertToBeDisplayed()
         return browser.getAlertText()
     }
+    async clickSignUpButton(){
+        await (await this.headerSignUpButton).click()
+    }
+    async fillSignInForm(username, password){
+        await (this.signUpModalUsernameInput).setValue(username)
+        await (this.signUpModalPasswordInput).setValue(password)
+    }
+    async clickSignUpModalSignUpButton(){
+        await (await this.signUpModalSignUpButton).click()
+    }
     
 }

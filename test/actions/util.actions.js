@@ -11,4 +11,8 @@ module.exports = class utils {
     async waitForAlertToBeDisplayed(timeout = 2000) {
         browser.waitUntil(EC.alertIsPresent(), { timeout:timeout })
     }
+    async getAlertMessage(){
+        await utilActions.waitForAlertToBeDisplayed()
+        return browser.getAlertText()
+    }
 }

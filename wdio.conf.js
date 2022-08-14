@@ -25,8 +25,6 @@ exports.config = {
     ],
     // Patterns to exclude.
     exclude: [
-        './test/specs/item.spec.js',
-        './test/specs/cart.spec.js'
     ],
     //
     // ============
