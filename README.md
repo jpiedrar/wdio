@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a WebDriver.io project developed for TheoremOne practical test. The idea of this project is to test an ecomerce web application that has several screens
+This is a WebDriver.io project. The idea of this project is to test an ecomerce web application that has several screens
 
 ## Specifications
 
